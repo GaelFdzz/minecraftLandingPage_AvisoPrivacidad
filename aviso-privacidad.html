@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Privacidad - EnderBuilds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Updated fonts from Orbitron/Poppins to Montserrat/Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0b0b;
+            --bg-secondary: #1a1a1a;
+            --accent-purple: #a020f0;
+            --accent-purple-dark: #8a2be2;
+            --text-white: #ffffff;
+            --text-gray: #b0b0b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Changed font from Poppins to Inter */
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-white);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3 {
+            /* Changed font from Orbitron to Montserrat */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .dark-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(160, 32, 240, 0.3);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dark-logo-text {
+            /* Changed font from Orbitron to Montserrat */
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent-purple);
+            /* Removed default text-shadow glow effect */
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: var(--text-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent-purple);
+            /* Added glow effect only on hover */
+            text-shadow: 0 0 10px var(--accent-purple);
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .privacy-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            color: var(--accent-purple);
+            /* Removed default text-shadow glow effect */
+            text-align: center;
+        }
+
+        .privacy-intro {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-purple);
+            margin-bottom: 3rem;
+            /* Removed default box-shadow glow effect */
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+        }
+
+        .privacy-section h2 {
+            color: var(--accent-purple);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(160, 32, 240, 0.3);
+        }
+
+        .privacy-section h3 {
+            color: var(--text-white);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .privacy-section p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section ul {
+            list-style: none;
+            margin-left: 1rem;
+        }
+
+        .privacy-section li {
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .privacy-section li::before {
+            content: '▸';
+            color: var(--accent-purple);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid rgba(160, 32, 240, 0.3);
+        }
+
+        .contact-info strong {
+            color: var(--accent-purple);
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--text-gray);
+            font-style: italic;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(160, 32, 240, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .privacy-container {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            .privacy-intro {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="dark-header">
+        <a href="index.html" class="dark-logo-text">EnderBuilds</a>
+        <a href="index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Volver al inicio
+        </a>
+    </header>
+
+    <div class="privacy-container">
+        <h1 class="privacy-title">Aviso de Privacidad</h1>
+
+        <div class="privacy-intro">
+            <p><strong>EnderBuilds México S.A. de C.V.</strong> (en adelante "El Responsable"), con domicilio para oír y recibir notificaciones en Avenida Insurgentes Sur 1458, Colonia Actipan, Alcaldía Benito Juárez, C.P. 03230, Ciudad de México, México, y portal de internet <strong>www.enderbuilds.com</strong>, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>1. ¿Para qué fines utilizaremos sus datos personales?</h2>
+            <p>Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:</p>
+            
+            <h3>Finalidades Primarias:</h3>
+            <ul>
+                <li>Establecer un primer contacto en respuesta al mensaje enviado a través de nuestro formulario web.</li>
+                <li>Proporcionarle la información, cotizaciones y detalles solicitados sobre nuestros servicios de construcción en Minecraft.</li>
+                <li>Dar seguimiento a su solicitud e interés en nuestros servicios.</li>
+            </ul>
+
+            <p>De manera adicional, utilizaremos su información personal para las siguientes finalidades secundarias que no son necesarias para el servicio solicitado, pero que nos permiten y facilitan brindarle una mejor atención:</p>
+
+            <h3>Finalidades Secundarias:</h3>
+            <ul>
+                <li>Enviarle boletines informativos (newsletters) con promociones, nuevos productos o noticias relevantes sobre nuestros servicios.</li>
+            </ul>
+
+            <div class="contact-info">
+                <p>En caso de que no desee que sus datos personales sean tratados para estas finalidades secundarias, desde este momento usted nos lo puede comunicar enviando un correo electrónico a <strong>privacidad@enderbuilds.com</strong>. La negativa para el uso de sus datos personales para estas finalidades no podrá ser un motivo para que le neguemos los servicios y productos que solicita o contrata con nosotros.</p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>2. ¿Qué datos personales utilizaremos para estos fines?</h2>
+            <p>Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:</p>
+            <ul>
+                <li>Nombre</li>
+                <li>Correo Electrónico</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>3. ¿Con quién compartimos su información personal?</h2>
+            <p>Le informamos que sus datos personales no son compartidos con terceras personas, empresas u organizaciones distintas a nosotros, salvo aquellos que sean necesarios para cumplir con las obligaciones legales aplicables.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>4. ¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso (Derechos ARCO)?</h2>
+            <p>Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.</p>
+
+            <div class="contact-info">
+                <p>Para el ejercicio de cualquiera de los derechos ARCO, o para revocar su consentimiento para el tratamiento de sus datos, usted deberá presentar la solicitud respectiva a través de la siguiente dirección de correo electrónico:</p>
+                <p><strong>privacidad@enderbuilds.com</strong></p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>5. ¿Cómo puede conocer los cambios en este aviso de privacidad?</h2>
+            <p>El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales o de nuestras propias necesidades por los productos o servicios que ofrecemos.</p>
+            <!-- Updated URL to match new filename -->
+            <p>Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, a través de nuestro portal de internet: <strong>www.enderbuilds.com/aviso-privacidad.html</strong>.</p>
+        </div>
+
+        <div class="last-updated">
+            <p><strong>Fecha de última actualización:</strong> 22 de octubre de 2025</p>
+        </div>
+    </div>
+</body>
+</html>

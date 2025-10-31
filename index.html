@@ -140,7 +140,10 @@
             }
         }
 
-        /* Updated hero section to match React component structure */
+        .end{
+            color: var(--accent-purple);
+        }
+
         .hero-section {
             min-height: 100vh;
             display: flex;
@@ -148,7 +151,6 @@
             justify-content: center;
             padding: 6rem 2rem 2rem;
             position: relative;
-            background: linear-gradient(180deg, var(--bg-primary) 0%, #1a0a2e 100%);
         }
 
         .hero-section::before {
@@ -188,7 +190,6 @@
             width: 100%;
             max-width: 600px;
             aspect-ratio: 1;
-            background: radial-gradient(circle, rgba(160, 32, 240, 0.2) 0%, transparent 70%);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -305,6 +306,10 @@
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -432,7 +437,6 @@
             background: var(--bg-secondary);
             padding: 3rem;
             border-radius: 12px;
-            border-left: 4px solid var(--accent-purple);
             position: relative;
         }
 
@@ -520,13 +524,7 @@
         }
 
         .pricing-card:hover {
-            border-color: var(--accent-purple);
-            box-shadow: 0 0 40px rgba(160, 32, 240, 0.5);
             transform: translateY(-10px);
-        }
-
-        .pricing-card:hover::before {
-            transform: scaleX(1);
         }
 
         .featured-badge {
@@ -811,64 +809,60 @@
 </head>
 
 <body>
-    <!-- Particle Background -->
     <div class="particles" id="particles"></div>
 
-    <!-- Added header navigation -->
     <header class="dark-header">
         <div class="dark-logo-text">EnderBuilds</div>
         <nav class="dark-nav">
-            <a href="#about" class="dark-nav-link">About</a>
-            <a href="#services" class="dark-nav-link">Services</a>
-            <a href="#portfolio" class="dark-nav-link">Portfolio</a>
-            <a href="#pricing" class="dark-nav-link">Pricing</a>
-            <a href="#contact" class="btn btn-primary">Request Build</a>
+            <a href="#about" class="dark-nav-link">Nosotros</a>
+            <a href="#services" class="dark-nav-link">Servicios</a>
+            <a href="#portfolio" class="dark-nav-link">Portafolio</a>
+            <a href="#pricing" class="dark-nav-link">Precios</a>
+            <a href="#contact" class="btn btn-primary">Solicitar Construcción</a>
         </nav>
     </header>
 
-    <!-- Updated hero section structure -->
     <section class="hero-section">
         <div class="hero-content">
             <div class="hero-left">
-                <h1 class="hero-title">Custom Minecraft Builds Forged in the End.</h1>
-                <p class="hero-subtitle">Professional builders creating epic worlds — from survival bases to server
-                    spawns.</p>
+                <h1 class="hero-title">Construcciones Personalizadas de Minecraft Forjadas en el <span class="end">End</span>.</h1>
+                <p class="hero-subtitle">Constructores profesionales creando mundos épicos — desde bases de
+                    supervivencia hasta spawns de servidor.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
-                        Request Your Build
+                        Solicita Tu Construcción
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <a href="#portfolio" class="btn btn-secondary">View Gallery</a>
+                    <a href="#portfolio" class="btn btn-secondary">Ver Galería</a>
                 </div>
             </div>
             <div class="hero-right">
                 <div class="spline-container">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ender_dragon-EGbja9YMobYjA9XzfDM7BcWmntYSnN.gif"
-                        alt="Ender Dragon" class="ender-dragon-image">
+                        alt="Dragón del End" class="ender-dragon-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Updated about section content -->
     <section id="about" class="section-container fade-in">
         <div class="content-wrapper">
-            <h2 class="section-title">Master Builders from the End</h2>
+            <h2 class="section-title">Maestros Constructores del End</h2>
             <p class="section-description">
-                EnderBuilds is a team of expert Minecraft builders based in Mexico, specializing in custom constructions
-                for servers, realms, and content creators. We bring your vision to life with professional craftsmanship
-                and creative excellence inspired by the mysterious End dimension.
+                EnderBuilds es un equipo de constructores expertos de Minecraft con sede en México, especializados en
+                construcciones personalizadas
+                para servidores, realms y creadores de contenido. Damos vida a tu visión con artesanía profesional
+                y excelencia creativa inspirada en la misteriosa dimensión del End.
             </p>
         </div>
     </section>
 
-    <!-- Updated services section with new content and icons -->
     <section id="services" class="section-container fade-in">
         <div class="content-wrapper">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title">Nuestros Servicios</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -877,9 +871,10 @@
                             <polyline points="9 22 9 12 15 12 15 22"></polyline>
                         </svg>
                     </div>
-                    <h3 class="service-title">Custom Builds</h3>
-                    <p class="service-description">Unique structures tailored to your vision, from medieval castles to
-                        futuristic cities.</p>
+                    <h3 class="service-title">Construcciones Personalizadas</h3>
+                    <p class="service-description">Estructuras únicas adaptadas a tu visión, desde castillos medievales
+                        hasta
+                        ciudades futuristas.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -889,9 +884,10 @@
                             <polyline points="2 12 12 17 22 12"></polyline>
                         </svg>
                     </div>
-                    <h3 class="service-title">Server Spawn Design</h3>
-                    <p class="service-description">Eye-catching spawn points that welcome players with unforgettable
-                        first impressions.</p>
+                    <h3 class="service-title">Diseño de Spawns</h3>
+                    <p class="service-description">Puntos de aparición llamativos que dan la bienvenida a los jugadores
+                        con primeras impresiones
+                        inolvidables.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -903,9 +899,9 @@
                             <line x1="12" y1="22.08" x2="12" y2="12"></line>
                         </svg>
                     </div>
-                    <h3 class="service-title">Adventure & RPG Maps</h3>
-                    <p class="service-description">Immersive worlds with quests, dungeons, and storylines for epic
-                        gameplay.</p>
+                    <h3 class="service-title">Mapas de Aventura y RPG</h3>
+                    <p class="service-description">Mundos inmersivos con misiones, mazmorras e historias para un juego
+                        épico.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -913,9 +909,9 @@
                             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                         </svg>
                     </div>
-                    <h3 class="service-title">Redstone Engineering</h3>
-                    <p class="service-description">Complex mechanisms and automated systems that bring your builds to
-                        life.</p>
+                    <h3 class="service-title">Ingeniería de Redstone</h3>
+                    <p class="service-description">Mecanismos complejos y sistemas automatizados que dan vida a tus
+                        construcciones.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -923,9 +919,9 @@
                             <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="service-title">World Decoration</h3>
-                    <p class="service-description">Detailed terraforming and landscaping to create breathtaking
-                        environments.</p>
+                    <h3 class="service-title">Decoración de Mundos</h3>
+                    <p class="service-description">Terraformación detallada y paisajismo para crear entornos
+                        impresionantes.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -936,76 +932,78 @@
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
                     </div>
-                    <h3 class="service-title">Terrain Sculpting</h3>
-                    <p class="service-description">Custom landscapes and natural features that enhance your server
-                        atmosphere.</p>
+                    <h3 class="service-title">Esculpido de Terreno</h3>
+                    <p class="service-description">Paisajes personalizados y características naturales que mejoran la
+                        atmósfera de tu servidor.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Updated portfolio section with new items and images -->
     <section id="portfolio" class="section-container fade-in">
         <div class="content-wrapper">
-            <h2 class="section-title">Featured Builds</h2>
+            <h2 class="section-title">Construcciones Destacadas</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-card">
                     <div class="portfolio-image-wrapper">
-                        <img src="./public/portfolio/end_castle.png" alt="End Fortress" class="portfolio-image">
+                        <img src="./public/portfolio/end_castle.png" alt="Fortaleza del End" class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3 class="portfolio-name">End Fortress</h3>
-                            <p class="portfolio-description">A massive obsidian fortress floating in the void with
-                                purple crystal towers.</p>
+                            <h3 class="portfolio-name">Fortaleza del End</h3>
+                            <p class="portfolio-description">Una enorme fortaleza de obsidiana flotando en el vacío con
+                                torres de cristal púrpura.</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image-wrapper">
-                        <img src="./public/portfolio/sky.png" alt="Sky City" class="portfolio-image">
+                        <img src="./public/portfolio/sky.png" alt="Ciudad del Cielo" class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3 class="portfolio-name">Sky City</h3>
-                            <p class="portfolio-description">A floating metropolis with interconnected islands and
-                                bridges across the clouds.</p>
+                            <h3 class="portfolio-name">Ciudad del Cielo</h3>
+                            <p class="portfolio-description">Una metrópolis flotante con islas interconectadas y
+                                puentes a través de las nubes.</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image-wrapper">
-                        <img src="./public/portfolio/crimson.png" alt="Crimson Base" class="portfolio-image">
+                        <img src="./public/portfolio/crimson.png" alt="Base Carmesí" class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3 class="portfolio-name">Crimson Base</h3>
-                            <p class="portfolio-description">A mysterious underground base with glowing red crystals and
-                                ancient architecture.</p>
+                            <h3 class="portfolio-name">Base Carmesí</h3>
+                            <p class="portfolio-description">Una misteriosa base subterránea con brillantes cristales
+                                rojos y
+                                arquitectura antigua.</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image-wrapper">
-                        <img src="./public/portfolio/obsidiantower.png" alt="Obsidian Tower" class="portfolio-image">
+                        <img src="./public/portfolio/obsidiantower.png" alt="Torre de Obsidiana"
+                            class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3 class="portfolio-name">Obsidian Tower</h3>
-                            <p class="portfolio-description">A towering skyscraper made of dark materials with purple
-                                accent lighting.</p>
+                            <h3 class="portfolio-name">Torre de Obsidiana</h3>
+                            <p class="portfolio-description">Un imponente rascacielos hecho de materiales oscuros con
+                                iluminación de acento púrpura.</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image-wrapper">
-                        <img src="./public/portfolio/fantasyspawn.png" alt="Fantasy Spawn" class="portfolio-image">
+                        <img src="./public/portfolio/fantasyspawn.png" alt="Spawn de Fantasía" class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3 class="portfolio-name">Fantasy Spawn</h3>
-                            <p class="portfolio-description">An enchanted spawn point with magical portals and
-                                crystalline structures.</p>
+                            <h3 class="portfolio-name">Spawn de Fantasía</h3>
+                            <p class="portfolio-description">Un punto de aparición encantado con portales mágicos y
+                                estructuras cristalinas.</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image-wrapper">
-                        <img src="./public/portfolio/modern.png" alt="Modern Haven" class="portfolio-image">
+                        <img src="./public/portfolio/modern.png" alt="Refugio Moderno" class="portfolio-image">
                         <div class="portfolio-overlay">
-                            <h3 class="portfolio-name">Modern Haven</h3>
-                            <p class="portfolio-description">A sleek contemporary city district with glass buildings and
-                                neon accents.</p>
+                            <h3 class="portfolio-name">Refugio Moderno</h3>
+                            <p class="portfolio-description">Un elegante distrito de ciudad contemporáneo con edificios
+                                de cristal y
+                                detalles de neón.</p>
                         </div>
                     </div>
                 </div>
@@ -1013,36 +1011,38 @@
         </div>
     </section>
 
-    <!-- Updated testimonials section -->
     <section class="section-container fade-in">
         <div class="content-wrapper">
-            <h2 class="section-title">What Our Clients Say</h2>
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-content">EnderBuilds transformed our server spawn into something incredible.
-                        Player retention increased by 60%!</p>
+                    <p class="testimonial-content">EnderBuilds transformó el spawn de nuestro servidor en algo
+                        increíble.
+                        ¡La retención de jugadores aumentó en un 60%!</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">CG</div>
                         <div>
                             <div class="testimonial-name">Carlos_Gaming</div>
-                            <div class="testimonial-role">Minecraft Server Owner</div>
+                            <div class="testimonial-role">Dueño de Servidor de Minecraft</div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-content">The custom map they built for my series was absolutely stunning. My
-                        viewers were blown away!</p>
+                    <p class="testimonial-content">El mapa personalizado que construyeron para mi serie fue
+                        absolutamente impresionante. ¡Mis
+                        espectadores quedaron alucinados!</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">MS</div>
                         <div>
                             <div class="testimonial-name">Maria Streamz</div>
-                            <div class="testimonial-role">Twitch Streamer</div>
+                            <div class="testimonial-role">Streamer de Twitch</div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-content">Professional, creative, and fast delivery. These builders know
-                        exactly what the community wants.</p>
+                    <p class="testimonial-content">Profesionales, creativos y de entrega rápida. Estos constructores
+                        saben
+                        exactamente lo que la comunidad quiere.</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">JC</div>
                         <div>
@@ -1055,87 +1055,83 @@
         </div>
     </section>
 
-    <!-- Updated pricing section with new tiers -->
     <section id="pricing" class="section-container fade-in">
         <div class="content-wrapper">
-            <h2 class="section-title">Pricing Plans</h2>
+            <h2 class="section-title">Planes de Precios</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3 class="pricing-name">Starter Build</h3>
+                    <h3 class="pricing-name">Construcción Inicial</h3>
                     <div class="pricing-price">
                         <span class="price-currency">$</span>
                         <span class="price-amount">2,500</span>
                         <span class="price-period">MXN</span>
                     </div>
                     <ul class="pricing-features">
-                        <li class="pricing-feature">Small to medium build</li>
-                        <li class="pricing-feature">Basic redstone integration</li>
-                        <li class="pricing-feature">5 revision rounds</li>
-                        <li class="pricing-feature">1-2 week delivery</li>
-                        <li class="pricing-feature">Schematic file included</li>
+                        <li class="pricing-feature">Construcción pequeña a mediana</li>
+                        <li class="pricing-feature">Integración básica de redstone</li>
+                        <li class="pricing-feature">5 rondas de revisión</li>
+                        <li class="pricing-feature">Entrega en 1-2 semanas</li>
+                        <li class="pricing-feature">Archivo Schematic incluido</li>
                     </ul>
-                    <button class="btn btn-secondary">Get Started</button>
+                    <button class="btn btn-secondary">Comenzar</button>
                 </div>
                 <div class="pricing-card featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <h3 class="pricing-name">Pro Build</h3>
+                    <div class="featured-badge">Más Popular</div>
+                    <h3 class="pricing-name">Construcción Pro</h3>
                     <div class="pricing-price">
                         <span class="price-currency">$</span>
                         <span class="price-amount">8,500</span>
                         <span class="price-period">MXN</span>
                     </div>
                     <ul class="pricing-features">
-                        <li class="pricing-feature">Large scale project</li>
-                        <li class="pricing-feature">Advanced redstone systems</li>
-                        <li class="pricing-feature">Unlimited revisions</li>
-                        <li class="pricing-feature">2-4 week delivery</li>
-                        <li class="pricing-feature">Full world file + schematics</li>
-                        <li class="pricing-feature">Custom textures</li>
+                        <li class="pricing-feature">Proyecto a gran escala</li>
+                        <li class="pricing-feature">Sistemas de redstone avanzados</li>
+                        <li class="pricing-feature">Revisiones ilimitadas</li>
+                        <li class="pricing-feature">Entrega en 2-4 semanas</li>
+                        <li class="pricing-feature">Archivo de mundo completo + schematics</li>
+                        <li class="pricing-feature">Texturas personalizadas</li>
                     </ul>
-                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-primary">Comenzar</button>
                 </div>
                 <div class="pricing-card">
-                    <h3 class="pricing-name">Ender Project</h3>
+                    <h3 class="pricing-name">Proyecto Ender</h3>
                     <div class="pricing-price">
                         <span class="price-currency">$</span>
                         <span class="price-amount">25,000</span>
                         <span class="price-period">MXN</span>
                     </div>
                     <ul class="pricing-features">
-                        <li class="pricing-feature">Complete server transformation</li>
-                        <li class="pricing-feature">Multiple custom builds</li>
-                        <li class="pricing-feature">Full terrain sculpting</li>
-                        <li class="pricing-feature">Priority support</li>
-                        <li class="pricing-feature">1-2 month delivery</li>
-                        <li class="pricing-feature">Team of 3+ builders</li>
-                        <li class="pricing-feature">Dedicated project manager</li>
+                        <li class="pricing-feature">Transformación completa del servidor</li>
+                        <li class="pricing-feature">Múltiples construcciones personalizadas</li>
+                        <li class="pricing-feature">Esculpido de terreno completo</li>
+                        <li class="pricing-feature">Soporte prioritario</li>
+                        <li class="pricing-feature">Entrega en 1-2 meses</li>
+                        <li class="pricing-feature">Equipo de 3+ constructores</li>
+                        <li class="pricing-feature">Gerente de proyecto dedicado</li>
                     </ul>
-                    <button class="btn btn-secondary">Get Started</button>
+                    <button class="btn btn-secondary">Comenzar</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Updated contact section with form validation -->
     <section id="contact" class="section-container fade-in">
         <div class="content-wrapper">
-            <h2 class="section-title">Summon Your Builders</h2>
+            <h2 class="section-title">Invoca a Tus Constructores</h2>
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
-                    <input type="text" name="name" id="name" placeholder="Your Name" class="form-input">
+                    <input type="text" name="name" id="name" placeholder="Tu Nombre" class="form-input">
                     <span class="error-message" id="nameError"></span>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="contact" id="contact" placeholder="Email" class="form-input">
+                    <input type="text" name="contact" id="contact" placeholder="Correo Electrónico" class="form-input">
                     <span class="error-message" id="contactError"></span>
                 </div>
                 <div class="form-group">
-                    <textarea name="projectDetails" id="projectDetails" placeholder="Tell us about your project..."
+                    <textarea name="projectDetails" id="projectDetails" placeholder="Cuéntanos sobre tu proyecto..."
                         rows="5" class="form-input"></textarea>
                     <span class="error-message" id="projectError"></span>
                 </div>
-                <!-- Added privacy policy checkbox -->
-                <!-- Checkbox obligatorio para finalidades primarias -->
                 <div class="checkbox-group">
                     <input type="checkbox" id="privacyPrimary" required class="checkbox-input">
                     <label for="privacyPrimary" class="checkbox-label">
@@ -1144,7 +1140,6 @@
                     </label>
                 </div>
 
-                <!-- Checkbox opcional para finalidades secundarias -->
                 <div class="checkbox-group">
                     <input type="checkbox" id="privacySecondary" class="checkbox-input">
                     <label for="privacySecondary" class="checkbox-label">
@@ -1153,26 +1148,24 @@
                 </div>
                 <span class="error-message" id="privacyError"></span>
                 <button type="submit" class="btn btn-primary submit-button">
-                    Summon Your Builders
+                    Invoca a Tus Constructores
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </button>
                 <div class="success-message" id="successMessage" style="display: none;">
-                    Your request has been summoned! We'll contact you soon.
+                    ¡Tu solicitud ha sido invocada! Te contactaremos pronto.
                 </div>
             </form>
         </div>
     </section>
 
-    <!-- Updated footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="footer-logo">EnderBuilds</div>
-                <p class="footer-tagline">Master Builders from the End</p>
+                <p class="footer-tagline">Maestros Constructores del End</p>
             </div>
-            <!-- Added privacy policy link to footer -->
             <div class="footer-links">
                 <a href="https://discord.gg/enderbuilds" target="_blank" rel="noopener noreferrer"
                     class="footer-link">Discord</a>
@@ -1184,11 +1177,11 @@
             </div>
         </div>
         <div class="footer-divider"></div>
-        <div class="footer-copyright">© 2025 EnderBuilds — Made in Mexico</div>
+        <div class="footer-copyright">© 2025 EnderBuilds — Hecho en México</div>
     </footer>
 
     <script>
-        // Generate particles
+        // Generar partículas
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 50; i++) {
             const particle = document.createElement('div');
@@ -1200,7 +1193,7 @@
             particlesContainer.appendChild(particle);
         }
 
-        // Scroll animations
+        // Animaciones de scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -1218,7 +1211,7 @@
             observer.observe(el);
         });
 
-        // Smooth scrolling
+        // Desplazamiento suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1236,7 +1229,8 @@
         const nameInput = document.getElementById('name');
         const contactInput = document.getElementById('contact');
         const projectInput = document.getElementById('projectDetails');
-        const privacyCheckbox = document.getElementById('privacyAccept');
+        // NOTA: El ID original 'privacyAccept' no existe en el HTML; el correcto es 'privacyPrimary'
+        const privacyCheckbox = document.getElementById('privacyPrimary');
         const nameError = document.getElementById('nameError');
         const contactError = document.getElementById('contactError');
         const projectError = document.getElementById('projectError');
@@ -1246,7 +1240,7 @@
         function validateForm() {
             let isValid = true;
 
-            // Clear previous errors
+            // Limpiar errores anteriores
             nameError.textContent = '';
             contactError.textContent = '';
             projectError.textContent = '';
@@ -1255,23 +1249,23 @@
             contactInput.classList.remove('error');
             projectInput.classList.remove('error');
 
-            // Validate name
+            // Validar nombre
             if (!nameInput.value.trim()) {
-                nameError.textContent = 'Name is required';
+                nameError.textContent = 'El nombre es requerido';
                 nameInput.classList.add('error');
                 isValid = false;
             }
 
-            // Validate contact
+            // Validar contacto
             if (!contactInput.value.trim()) {
-                contactError.textContent = 'Email is required';
+                contactError.textContent = 'El correo electrónico es requerido';
                 contactInput.classList.add('error');
                 isValid = false;
             }
 
-            // Validate project details
+            // Validar detalles del proyecto
             if (!projectInput.value.trim()) {
-                projectError.textContent = 'Project details are required';
+                projectError.textContent = 'Los detalles del proyecto son requeridos';
                 projectInput.classList.add('error');
                 isValid = false;
             }
@@ -1288,10 +1282,10 @@
             e.preventDefault();
 
             if (validateForm()) {
-                // Show success message
+                // Mostrar mensaje de éxito
                 successMessage.style.display = 'block';
 
-                // Reset form after 3 seconds
+                // Restablecer formulario después de 3 segundos
                 setTimeout(() => {
                     contactForm.reset();
                     successMessage.style.display = 'none';
@@ -1299,7 +1293,7 @@
             }
         });
 
-        // Clear error on input
+        // Limpiar error al escribir
         [nameInput, contactInput, projectInput].forEach(input => {
             input.addEventListener('input', function () {
                 this.classList.remove('error');
